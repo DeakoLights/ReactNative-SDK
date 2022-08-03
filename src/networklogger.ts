@@ -102,7 +102,7 @@ class GleapNetworkIntercepter {
         }
 
         if (params.length >= 2) {
-          var method = params[1].method ? params[1].method : 'GET';
+          var method = params[1]?.method || 'GET';
           this.requests[gleapRequestId] = {
             request: {
               payload: this.preparePayload(params[1].body),
