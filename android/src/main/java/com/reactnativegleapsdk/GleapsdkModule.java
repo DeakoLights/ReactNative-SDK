@@ -341,15 +341,13 @@ public class GleapsdkModule extends ReactContextBaseJavaModule implements Lifecy
         new Runnable() {
           @Override
           public void run() {
-            promise.resolve(Gleap.getInstance().isOpened());
+            promise.resolve(Gleap.getInstance().isOpened());          
           }
         });
     } catch (NoUiThreadException e) {
       System.err.println(e.getMessage());
     }
   }
-
-  /**
    * Start bug report manually by calling this function.
    */
   @ReactMethod
@@ -370,7 +368,6 @@ public class GleapsdkModule extends ReactContextBaseJavaModule implements Lifecy
       System.err.println(e.getMessage());
     }
   }
-
   /**
    * Start bug report manually by calling this function.
    */
@@ -1061,18 +1058,4 @@ public class GleapsdkModule extends ReactContextBaseJavaModule implements Lifecy
     super.onCatalystInstanceDestroy();
   }
 
-  @Override
-  public void invalidate() {
-    invalidated = true;
-    super.invalidate();
-  }
-
-
-  private Activity getActivitySafe() throws NoUiThreadException {
-    Activity activity = getCurrentActivity();
-    if (activity == null) {
-      throw new NoUiThreadException();
-    }
-    return activity;
-  }
 }

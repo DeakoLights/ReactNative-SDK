@@ -7,7 +7,6 @@ Gleap.enableDebugConsoleLog();
 // Gleap.setActivationMethods(['SCREENSHOT']);
 Gleap.initialize('KProDXhMS0V3UUku2iNnrZ4XsBnAYzxt');
 Gleap.showFeedbackButton(true);
-
 Gleap.registerListener('customActionTriggered', (data) => {
   console.log('customActionTriggered');
   console.log(data);
