@@ -348,6 +348,7 @@ public class GleapsdkModule extends ReactContextBaseJavaModule implements Lifecy
       System.err.println(e.getMessage());
     }
   }
+   /**
    * Start bug report manually by calling this function.
    */
   @ReactMethod
