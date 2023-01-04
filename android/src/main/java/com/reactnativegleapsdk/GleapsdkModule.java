@@ -1061,13 +1061,6 @@ public class GleapsdkModule extends ReactContextBaseJavaModule implements Lifecy
     super.onCatalystInstanceDestroy();
   }
 
-  @Override
-  public void invalidate() {
-    invalidated = true;
-    super.invalidate();
-  }
-
-
   private Activity getActivitySafe() throws NoUiThreadException {
     Activity activity = getCurrentActivity();
     if (activity == null) {
