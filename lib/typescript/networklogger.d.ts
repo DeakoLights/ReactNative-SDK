@@ -18,3 +18,4 @@ declare class GleapNetworkIntercepter {
     interceptNetworkRequests(callback: any): any;
 }
 export default GleapNetworkIntercepter;
+//# sourceMappingURL=networklogger.d.ts.map
